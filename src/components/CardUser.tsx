@@ -1,10 +1,10 @@
 import {View, Pressable} from 'react-native';
 import React, {FC} from 'react';
-import {User} from '../../interfaces/user.interface';
+import {User} from '../interfaces/user.interface';
 import {StyleSheet} from 'react-native';
-import {Colors} from '../../const/colors';
+import {Colors} from '../const/colors';
 import Icon from 'react-native-vector-icons/Ionicons';
-import MyText from './MyText';
+import MyText from './ui/MyText';
 
 type Props = {
   user: User;

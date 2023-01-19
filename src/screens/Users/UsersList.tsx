@@ -1,6 +1,6 @@
 import {View, FlatList, StyleSheet} from 'react-native';
 import React, {FC, useEffect} from 'react';
-import CardUser from '../../components/ui/CardUser';
+import CardUser from '../../components/CardUser';
 import {Colors} from '../../const/colors';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParams} from '../../navigation/UserNavigation';
