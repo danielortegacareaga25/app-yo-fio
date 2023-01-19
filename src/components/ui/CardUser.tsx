@@ -11,7 +11,7 @@ type Props = {
   onPress: () => void;
 };
 
-const CardUser: FC<Props> = ({user: {id, phone, username}, onPress}) => {
+const CardUser: FC<Props> = ({user: {phone, name}, onPress}) => {
   return (
     <Pressable
       style={({pressed}) =>
@@ -19,7 +19,7 @@ const CardUser: FC<Props> = ({user: {id, phone, username}, onPress}) => {
           ? {...styles.container, ...styles.containerPressed}
           : {...styles.container, ...styles.containerNoPressed}
       }
-      onPress={() => onPress(id)}>
+      onPress={onPress}>
       {({pressed}) => (
         <>
           <Icon
@@ -33,7 +33,7 @@ const CardUser: FC<Props> = ({user: {id, phone, username}, onPress}) => {
                 (styles.text,
                 pressed ? styles.textPressed : styles.textNoPressed)
               }
-              text={username}
+              text={name}
             />
             <MyText
               style={

@@ -16,7 +16,12 @@ const UsersDetail: FC<Props> = ({
       name,
       username,
       email,
-      address: {street},
+      phone,
+      address: {
+        street,
+        geo: {lat, lng},
+      },
+      company: {name: nameCompany},
     },
   },
 }) => {
@@ -33,9 +38,21 @@ const UsersDetail: FC<Props> = ({
           <View style={styles.containerDescription}>
             <MyText style={styles.name} text={`${name} (${username})`} />
             <MyText style={styles.email} text={email} />
-            <View style={styles.containerAdreess}>
-              <Icon size={20} name="location" color={Colors.SECOND} />
+            <View style={styles.containerInfo}>
+              <Icon size={20} name="call" color={Colors.SECOND} />
+              <MyText style={styles.address} text={phone} />
+            </View>
+            <View style={styles.containerInfo}>
+              <Icon size={20} name="briefcase" color={Colors.SECOND} />
+              <MyText style={styles.address} text={nameCompany} />
+            </View>
+            <View style={styles.containerInfo}>
+              <Icon size={20} name="home" color={Colors.SECOND} />
               <MyText style={styles.address} text={street} />
+            </View>
+            <View style={styles.containerInfo}>
+              <Icon size={20} name="globe" color={Colors.SECOND} />
+              <MyText style={styles.address} text={`lat:${lat} lng:${lng}`} />
             </View>
           </View>
         </View>
@@ -59,8 +76,9 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   email: {color: Colors.SECOND, fontSize: 12, marginBottom: 10},
-  containerAdreess: {
+  containerInfo: {
     flexDirection: 'row',
+    marginBottom: 5,
   },
   address: {
     color: Colors.SECOND,
