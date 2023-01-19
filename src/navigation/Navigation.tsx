@@ -2,12 +2,17 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeScreen from '../screens/HomeScreen';
-import UsersScreen from '../screens/Users/UsersScreen';
 import CustomDrawer from '../components/ui/CustomDrawer';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {Colors} from '../const/colors';
+import UsersScreen from '../screens/Users/UsersScreen';
 
-const Drawer = createDrawerNavigator();
+export type RootDrawerParams = {
+  Home: undefined;
+  Users: undefined;
+};
+
+const Drawer = createDrawerNavigator<RootDrawerParams>();
 
 const Navigation = () => {
   return (

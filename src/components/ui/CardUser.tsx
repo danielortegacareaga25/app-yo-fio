@@ -8,7 +8,7 @@ import MyText from './MyText';
 
 type Props = {
   user: User;
-  onPress: (id: number) => void;
+  onPress: () => void;
 };
 
 const CardUser: FC<Props> = ({user: {id, phone, username}, onPress}) => {
