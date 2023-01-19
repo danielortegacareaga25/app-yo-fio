@@ -19,8 +19,6 @@ const GoogleMap: FC<Props> = ({latitude, longitude}) => {
 
   useEffect(() => {
     if (latitude && longitude) {
-      console.log(latitude);
-      console.log(longitude);
       setCoords({latitude: latitude, longitude: longitude});
     }
   }, [latitude, longitude]);
