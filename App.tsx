@@ -5,15 +5,22 @@ import {NavigationContainer} from '@react-navigation/native';
 import Navigation from './src/navigation/Navigation';
 import {Provider} from 'react-redux';
 import {store} from './src/store';
+import {PermissionsProvider} from './src/context/PermissionsContext';
+
+const AppState = ({children}: any) => {
+  return <PermissionsProvider>{children}</PermissionsProvider>;
+};
 
 export const App = () => {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <NavigationContainer>
-          <Navigation />
-        </NavigationContainer>
-      </View>
+      <AppState>
+        <View style={styles.container}>
+          <NavigationContainer>
+            <Navigation />
+          </NavigationContainer>
+        </View>
+      </AppState>
     </Provider>
   );
 };

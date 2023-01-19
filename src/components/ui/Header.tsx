@@ -9,15 +9,12 @@ const Header = () => {
   const {dateShow, hourShow} = useDateTime();
 
   return (
-    <>
-      <View style={styles.container}>
-        <Icon name="rocket" size={30} color={Colors.SECOND} />
-        <MyText text="Welcome to YoFio" style={styles.textWelcome} />
-        <MyText text={dateShow} style={styles.textDate} />
-        <MyText text={hourShow} style={styles.textHour} />
-      </View>
-      <View style={styles.containerMap}></View>
-    </>
+    <View style={styles.container}>
+      <Icon name="rocket" size={30} color={Colors.SECOND} />
+      <MyText text="Welcome to YoFio" style={styles.textWelcome} />
+      <MyText text={dateShow} style={styles.textDate} />
+      <MyText text={hourShow} style={styles.textHour} />
+    </View>
   );
 };
 
@@ -29,12 +26,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 10,
-  },
-  containerMap: {
-    flex: 1,
-    borderRadius: 20,
-    marginTop: -20,
-    backgroundColor: 'white',
   },
   textWelcome: {
     color: Colors.SECOND,
