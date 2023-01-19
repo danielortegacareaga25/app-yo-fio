@@ -30,9 +30,9 @@ const GoogleMap: FC<Props> = ({latitude, longitude}) => {
     ) {
       Geolocation.getCurrentPosition(info => {
         const {
-          coords: {latitude, longitude},
+          coords: {latitude: lat, longitude: lg},
         } = info;
-        setCoords({latitude, longitude});
+        setCoords({latitude: lat, longitude: lg});
       });
     }
   }, [permissions, coords]);
