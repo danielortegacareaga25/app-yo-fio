@@ -5,3 +5,7 @@ Hi! I'm a Sofware Development with 6 years of experience with Javascript technol
 # APK ANDROID
 
 The Apk to Android is in the folder **app/**
+
+## Screen Splash
+
+![Splash Screen](https://github.com/danielortegacareaga25/app-yo-fio/blob/main/screenshots/Splash_screen.png?raw=true)
