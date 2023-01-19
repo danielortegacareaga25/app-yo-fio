@@ -13,6 +13,7 @@ const Navigation = () => {
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawer {...props} />}
+      initialRouteName="Users"
       screenOptions={{
         headerShown: false,
         headerTransparent: true,
