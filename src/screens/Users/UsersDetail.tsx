@@ -14,6 +14,7 @@ const UsersDetail: FC<Props> = ({
   route: {
     params: {
       name,
+      username,
       email,
       address: {street},
     },
@@ -30,7 +31,7 @@ const UsersDetail: FC<Props> = ({
             source={require('../../assets/owl.jpeg')}
           />
           <View style={styles.containerDescription}>
-            <MyText style={styles.name} text={name} />
+            <MyText style={styles.name} text={`${name} (${username})`} />
             <MyText style={styles.email} text={email} />
             <View style={styles.containerAdreess}>
               <Icon size={20} name="location" color={Colors.SECOND} />
@@ -53,11 +54,11 @@ const styles = StyleSheet.create({
   },
   imgBg: {padding: 40},
   avatar: {borderRadius: 50, height: 100, width: 100, marginBottom: 20},
-  name: {color: Colors.SECOND, fontSize: 20},
+  name: {color: Colors.SECOND, fontSize: 20, marginBottom: 5},
   containerDescription: {
     marginLeft: 15,
   },
-  email: {color: Colors.SECOND, fontSize: 12},
+  email: {color: Colors.SECOND, fontSize: 12, marginBottom: 10},
   containerAdreess: {
     flexDirection: 'row',
   },
